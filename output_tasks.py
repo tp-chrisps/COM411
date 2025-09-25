@@ -1,3 +1,6 @@
 # display message to the screen
-name = input("what is your name")
-print(f"it is nice to meet you {name}")
+eye = input("enter a character for the eye")
+print("\n##########")
+print(f"#  {eye}  {eye}  #")
+print("#  ----  #")
+print("##########")
