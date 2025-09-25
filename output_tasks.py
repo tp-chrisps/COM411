@@ -1,10 +1,19 @@
 # display message to the screen
-age = int(input("Enter your age: "))
-height = int(input("Enter your height: "))/100
-weight = int(input("Enter your weight: "))
-bmi = weight / (height * height)
-if bmi < 18.5: print("You are under weight")
-if bmi >= 18.5 and bmi < 25: print("You are heathly weight")
-if bmi >= 25 and bmi < 30: print("you are obese weight")
-if bmi >= 40: print("You are very obese weight")
-print("Your BMI is", bmi)
+lives = int(input("enter number of lives"))
+energy = int(input("enter number of energy levels"))
+shield = int(input("enter number of shields"))
+print("health has been set\n\n")
+
+heart = ("♥")
+energyIcon=("♦")
+shieldIcon=("✠")
+print("\nLives:", end=(" "))
+for i in range(0, lives):
+    print(heart, end="")
+print("\nEnergy:", end=(" "))
+for i in range(0, energy):
+    print(energyIcon, end="")
+print("\nShield:", end=(" "))
+for i in range(0, shield):
+    print(shieldIcon, end="")
+
