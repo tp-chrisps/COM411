@@ -1,6 +1,3 @@
 # display message to the screen
-print("########")
-print("#      #")
-print("#      #")
-print("########")
-
+name = input("what is your name")
+print(f"it is nice to meet you {name}")
