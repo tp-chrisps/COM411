@@ -1,3 +1,4 @@
-bookType = input("What type of book is this?")
-if bookType == "adventure": print("I like adventure books!")
-print("Finished reading book")
+activity = input("Please enter the activity to be performed.")
+if activity == "calculate": print("Performing calculations...")
+else: print("Performing activity...")
+print("Activity completed")
