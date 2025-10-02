@@ -1,9 +1,7 @@
-i = 0
+cover = input("What type of cover does the book have?")
 
-num1 = input("enter first number")
-num2 = input("enter second number")
-num3 = input("enter third number")
-if (int(num1) % 2)==0: i = i + 1
-if (int(num2) % 2)==0: i = i + 1
-if (int(num3) % 2)==0: i = i + 1
-print(f"There were {i} even and {3-i} odd numbers")
+if cover =="soft":
+    bound = input("Is the book perfect bound?")
+    if bound == "yes":print("Soft cover, perfect bound books are very popular!")
+    else:print("Soft covers with coils or stitches are great for short books")
+if cover =="hard":print("Books with hard covers can be more expensive!")
