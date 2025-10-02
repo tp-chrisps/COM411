@@ -1,3 +1,5 @@
-num = input("Enter a number: ")
-if (int(num) % 2) == 1: print("number is odd")
-else: print("number is even")
+num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+if num1 > num2: print("Second number is smallest")
+elif num2 > num1: print("First number is smallest")
+else: print("Numbers are equal")
