@@ -1,5 +1,3 @@
-direction = input("Which direction should I go (up, down, left or right")
-if direction == "up": print("I am moving upwards")
-elif direction == "down": print("I am moving downwards")
-elif direction == "left": print("I am moving left")
-elif direction == "right": print("I am moving right")
+num = input("Enter a number: ")
+if (int(num) % 2) == 1: print("number is odd")
+else: print("number is even")
