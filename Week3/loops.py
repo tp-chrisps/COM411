@@ -1,6 +1,5 @@
-num = int(input("How many mountains should I display? "))
-print("Displaying...")
+num = int(input("How far are we from the target? "))
 
 for i in range(num):
-    print("Very cool ascii art of a mountain.") #python didnt like ascii mountain
-print("Done!")
+    print(f"{num - i} steps remaining")
+print("Target achieved!")
