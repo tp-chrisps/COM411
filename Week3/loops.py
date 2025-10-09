@@ -1,5 +1,5 @@
-phrase = input("Please enter a phrase: ")
-i = 0
-while i < len(phrase):
-    print("Hi", end=" ")
-    i += 1
+print("Calculating the sum of the first 100 numbers...")
+num = 0
+for i in range(1,101):
+    num = num + i
+print(f"...Done! The answer is {num}")
