@@ -1,5 +1,9 @@
-num = int(input("How far are we from the target? "))
-
-for i in range(num):
-    print(f"{num - i} steps remaining")
-print("Target achieved!")
+level = int(input("What level of brightness is required? "))
+print("Adjusting brightness")
+a = "**"
+b = "**"
+for i in range(0,level,2):
+    print("Brightness level: ",end="")
+    print(a)
+    a = a + b
+print("Complete!")
