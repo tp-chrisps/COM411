@@ -1,5 +1,9 @@
-word = input("What phrase do you want to see in reverse?\n")
-print("Reversing...")
-print("The phrase is: ",end="")
-for i in range(len(word)):
-    print(word[(len(word)-1)-i],end="")
+row= int(input("How many rows should I have?"))
+column = int(input("How many columns should I have?"))
+print("Here I go:\n")
+for j in range(column):
+    for i in range(row):
+        print(":-) ",end = "")
+    print()
+
+
