@@ -1,6 +1,6 @@
-i = int(input("How many numbers should I add up?"))
-count = 0
-for j in range (1,i+1):
-    num = int(input(f"Enter a number {j} of {i}: "))
-    count = count + num
-print(f"The answer is {count}")
+num = int(input("How many mountains should I display? "))
+print("Displaying...")
+
+for i in range(num):
+    print("Very cool ascii art of a mountain.") #python didnt like ascii mountain
+print("Done!")
