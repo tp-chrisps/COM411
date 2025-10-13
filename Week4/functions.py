@@ -1,8 +1,12 @@
 import random as rnd
-def add (a,b):
-    c = a + b
-    return c
-a = rnd.randint(1,10)
-b = int(input())
-ans = add(a,b)
-print(ans)
+def prime (num):
+    count = 0
+    for i in range(2, round(num/2)):
+        if num % i == 0:
+            count =+ 1
+    if count == 0:
+        return True
+    else: return False
+
+num = int(input("Enter a number: "))
+print(prime(num))
