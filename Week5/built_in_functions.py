@@ -1,7 +1,7 @@
 print("Program Started!")
-char = input("Enter a character: ")
-while len(char) != 1:
-    print("Error enter a single digit character")
-    char = input("Enter a character: ")
-print(f"The ASCII code for {char} is {ord(char)}")
+code = int(input("Please enter an ASCII code"))
+while code < 1:
+    code = int(input("Error \nPlease enter an ASCII code:"))
+if code in range(32, 127):
+    print(f"The character represented by the ASCII code is: {chr(code)}")
 print("Program Ended!")
