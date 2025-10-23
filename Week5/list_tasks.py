@@ -6,7 +6,7 @@ def directions():
     return steps
 
 def movements():
-    path = ["Move Forward", 10, "Move Backward", 5, "Move Left", 3, "Move Right", 1]
+    path = []
     return path
 
 def menu():
@@ -16,6 +16,15 @@ def menu():
     steps.append(direction)
     for i in range(len(steps)):
         print(f"{i}: {steps[i]}")
+
+def menu_and_input():
+    path = movements()
+    for i in range(5):
+        print("Please enter a direction:")
+        direction = input("0: Move forward \n1: Move backward \n2: Turn left \n3: Turn right")
+        path.append(direction)
+    return path
+
 
 def run_task1():
     if __name__ == "__main__":
@@ -29,4 +38,8 @@ def run_task2():
 def run_task3():
     menu()
 
-run_task3()
+def run_task4():
+    route = menu_and_input()
+    print("Escape route: ", route)
+
+run_task4()
