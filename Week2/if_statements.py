@@ -1,6 +1,6 @@
-type = input("What type of adventure should I take?")
-if type == "short" or type =="scary":print("Entering the dark forest!")
-elif type == "safe" or type == "long":print("Taking the safe route!")
-else: print("Not sure which route to take")
+hear = input("What did I hear?")
+see = input("What did I see?")
+if (hear == "grrr") and (see == "two red eyes"): print("There is a scary creature. I should get out of here!")
+else: print("I am a little scared but I will continue!")
 
 
