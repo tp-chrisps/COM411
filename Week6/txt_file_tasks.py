@@ -5,22 +5,45 @@ def cwd():
     print(f"The directory contains the following files:{os.listdir(filepath)}")
 
 def display_chars(path, num):
-    with open("library.txt") as file:
+    with open(path) as file:
         data = file.read(num)
     print(data)
     file.close()
 
 def display_line(path):
-    with open("library.txt") as file:
+    with open(path) as file:
         data = file.readline()
     print(data)
     file.close()
 
 def display_text(path):
-    with open("library.txt") as file:
+    with open(path) as file:
         data = file.read()
     print(data)
     file.close()
+
+def search(path):
+    print("Searching...")
+    with open(path) as file:
+        data = file.readlines()
+    for line in data:
+        print(f"Looked in {line}")
+    print("...Done!")
+
+# def search_books(path):
+#     print("Searching...")
+#     sections = ""
+#     books = "Books:\n"
+#     with open("library.txt") as file:
+#         data = file.readlines()
+#     for line in data:
+#         if line[:7] == "Sections":
+#             sections += sections + "\n"
+#         else:
+#             books += books + line + "\n"
+#     file.close()
+#     print("Done!")
+#     print(f"{sections}\n\n{books}")
 
 def run():
     cwd()
@@ -31,5 +54,9 @@ def run_task2():
     display_line(path)
     display_text(path)
 
+def run_task3():
+    path = "library.txt"
+    search(path)
+
 if __name__ == "__main__":
-    run_task2()
+    run_task3()
