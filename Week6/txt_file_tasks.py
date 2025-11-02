@@ -30,20 +30,23 @@ def search(path):
         print(f"Looked in {line}")
     print("...Done!")
 
-# def search_books(path):
-#     print("Searching...")
-#     sections = ""
-#     books = "Books:\n"
-#     with open("library.txt") as file:
-#         data = file.readlines()
-#     for line in data:
-#         if line[:7] == "Sections":
-#             sections += sections + "\n"
-#         else:
-#             books += books + line + "\n"
-#     file.close()
-#     print("Done!")
-#     print(f"{sections}\n\n{books}")
+def search_books(path):
+    print("Searching...")
+    sections = ""
+    books = "Books:\n"
+    with open(path) as file:
+        data = file.readlines()
+    for line in data:
+        if line[:7] == "Section":
+            sections = sections + line
+        else:
+            books = books + line
+    file.close()
+    file = open("section-books.txt","w")
+    file.write(f"{sections}\n\n{books}")
+    print("Done!")
+    print(f"{sections}\n\n{books}")
+
 
 def run():
     cwd()
@@ -58,5 +61,9 @@ def run_task3():
     path = "library.txt"
     search(path)
 
+def run_task4():
+    path = "books.txt"
+    search_books(path)
+
 if __name__ == "__main__":
-    run_task3()
+    run_task4()
