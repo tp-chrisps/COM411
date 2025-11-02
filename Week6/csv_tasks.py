@@ -15,5 +15,14 @@ def extract(path):
     print("Done! The extracted items are as follows:")
     print(names)
 
+def export(path, num):
+    for i in range(num):
+        id = input("Enter item_id: ")
+        item = input("Enter item_name: ")
+        colour = input("Enter item_colour: ")
+        with open(path, "a") as file:
+            file.write(f"{id},{item},{colour}\n")
+    print("Done!")
+
 if __name__ == "__main__":
-    extract("clothing.csv")
+    export("exported_items.csv",2)
