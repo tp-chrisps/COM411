@@ -8,18 +8,26 @@ def observed():
     return observations
 
 def observed_items():
-    observations = {}
-    for i in range(7):
+    observations = set()
+    for i in range(5):
         observ = input("Please enter an observation:\n")
-        if observ not in observations:
-            observations[observ] = 1
-        else:
-            observations[observ] += 1
-    for item in observations:
-        print(f"{item}: observed {observations[item]}times ")
-def run_task2():
-    observed_items()
+        observations.add(observ)
+    return observations
+
+def remove_observation(observation):
+    remove = input("Please enter an observation to remove:\n")
+    observation.remove(remove)
+    return observation
+
+def run_task3():
+    observations = observed_items()
+    choice = "y"
+    while choice == "y":
+        choice = input("Do you wish to remove an observation?(y/n)\n")
+        if choice == "y":
+            observations = remove_observation(observations)
+    print(observations)
 
 if __name__ == "__main__":
-    run_task2()
+    run_task3()
 
