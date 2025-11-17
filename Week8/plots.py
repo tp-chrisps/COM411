@@ -34,6 +34,27 @@ def path():
         y_values.append(y)
     return x_values, y_values
 
+def data():
+    paths = {}
+    line = input("Enter line type (:, -- or -): ")
+    colour = input("Enter colour (r, g, b): ")
+    marker = input("Enter marker (o, s, x): ")
+    paths["Lines"] = line
+    paths["Colour"] = colour
+    paths["Marker"] = marker
+    return paths
+
+def generate():
+    num = int(input("Enter number of lines: "))
+    for i in range(num):
+        values = path()
+        paths = data()
+        plt.plot(values[0], values[1], paths["Lines"] + paths["Colour"] + paths["Marker"])
+
+def run_task4():
+    generate()
+    plt.show()
+
 def run_task1():
     x_values = [1,2,3,4,5]
     y_values = [1,4,9,16,25]
@@ -51,4 +72,4 @@ def run_task3():
     plt.show()
 
 if __name__ == "__main__":
-    run_task3()
+    run_task4()
