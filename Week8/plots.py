@@ -19,6 +19,21 @@ def large():
     y = [1, 1, 6, 6, 1]
     plt.plot(x, y, 'bx-')
 
+def coordinate():
+    x = int(input("X coordinate: "))
+    y = int(input("Y coordinate: "))
+    return x, y
+
+def path():
+    print("Retrieving path...")
+    x_values = []
+    y_values = []
+    for i in range(4):
+        x, y = coordinate()
+        x_values.append(x)
+        y_values.append(y)
+    return x_values, y_values
+
 def run_task1():
     x_values = [1,2,3,4,5]
     y_values = [1,4,9,16,25]
@@ -30,5 +45,10 @@ def run_task2():
     large()
     plt.show()
 
+def run_task3():
+    values = path()
+    plt.plot(values[0], values[1], 'ro--')
+    plt.show()
+
 if __name__ == "__main__":
-    run_task2()
+    run_task3()
