@@ -1,6 +1,7 @@
 from Week10.planet import Planet
 from human import Human
 from robot import Robot
+from universe import Universe
 if __name__ == '__main__':
     human = Human("Human", 0, 0)
     human.display()
@@ -14,3 +15,9 @@ if __name__ == '__main__':
     print(planet)
     planet.remove_human(human)
     print(repr(planet))
+    universe = Universe()
+    universe.generate()
+    universe.generate()
+    print(repr(universe))
+    universe.show_populations("humans")
+
