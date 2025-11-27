@@ -1,5 +1,8 @@
-class Human:
-    MAX_ENERGY = 100
+from Week10.inhabitant import Inhabitant
+
+
+class Human(Inhabitant):
+
     def __init__(self, name, age, energy):
         self.name = name
         self.age = age
@@ -9,10 +12,10 @@ class Human:
         print(f"I am {self.name}")
 
     def __repr__(self):
-        print(f"name = {self.name}, age = {self.age}, energy = {self.energy}")
+        return f"name = {self.name}, age = {self.age}, energy = {self.energy}"
 
     def __str__(self):
-        print(f"I am {self.name}, {self.age} years old and have {self.energy} energy.")
+        return f"I am {self.name}, {self.age} years old and have {self.energy} energy."
 
     def grow(self):
         self.age += 1
